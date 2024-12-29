@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react';
+import TodoList from '../components/TodoList/TodoList';
 import Form from '../components/Form/Form';
+import { useEffect, useState } from 'react';
 
 const Todos = () => {
   const [todos, setTodos] = useState(() => {
@@ -20,6 +21,7 @@ const Todos = () => {
   return (
     <div>
       <Form onSubmit={addNewTodo} />
+      <TodoList todos={todos} />
     </div>
   );
 };
